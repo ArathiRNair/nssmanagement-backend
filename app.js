@@ -39,7 +39,10 @@ app.post("/add-entry",async(req,res)=>{
     res.json({"status":"success"})
 })
 
-
+app.post("/view-entry",async(req,res)=>{
+    const Nss=await nss.find()
+    res.json(Nss)
+})
 app.listen(3000,()=>{
     console.log("server started")
 })
